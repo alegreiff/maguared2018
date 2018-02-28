@@ -1,0 +1,247 @@
+div#iniciomaguared_dos {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+
+div#iniciomaguared {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+div#iniciomaguared article, div#iniciomaguared_dos article {
+  background-color: #ffffff;
+  color: #2e2e2e;
+  margin-bottom: 0;
+
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 0px;
+  align-items: start;
+  justify-items: start;
+  grid-gap: 0;
+}
+
+//div#iniciomaguared article a img, div#iniciomaguared_dos article a img{
+div#iniciomaguared article img, div#iniciomaguared_dos article img {
+  margin: 0px !important;
+  padding: 0px !important;
+  justify-self: start;
+  grid-area: 'imagen';
+
+  order: 20;
+  max-width: 320px !important;
+  height: auto !important;
+
+}
+
+div#iniciomaguared article span.maguared_fecha, div#iniciomaguared_dos article span.maguared_fecha {
+  //background-color: $naranja-maguared;
+  //color: #fff;
+  grid-area: 'fecha';
+  order: -1;
+  height: 20px;
+  font-size: 0.7em;
+  font-weight: 700;
+  justify-self: end;
+  padding: 0.3em;
+  display: block;
+  width: 100%;
+
+}
+
+div#iniciomaguared article header, div#iniciomaguared_dos article header {
+  display: block;
+  grid-area: 'titulo';
+  //background-color: $aguamarina-maguared;
+  height: 75px;
+  order: 30;
+  width: 100%;
+  padding: 0.2em;
+
+}
+
+div#iniciomaguared h2, div#iniciomaguared_dos h2 {
+  font-size: 1.2em;
+}
+
+div#iniciomaguared article span.maguared_categorias, div#iniciomaguared_dos article span.maguared_categorias {
+  justify-self: start;
+  align-self: start;
+  grid-area: 'categorias';
+  order: 40;
+  font-size: 0.8em;
+  padding-left: 0.4em;
+}
+
+div#iniciomaguared article div.entry-content, div#iniciomaguared_dos article div.entry-content {
+  justify-self: start;
+  align-self: start;
+  grid-area: 'entrada';
+  order: 50;
+  justify-self: end;
+  align-self: end;
+  height: 160px;
+  padding: 0.2em
+}
+
+/*
+div#iniciomaguared img{
+    margin: 0 !important;
+}
+
+div#iniciomaguared header{
+    background-color: aquamarine;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 60px;
+    top: -50px;
+}
+
+
+span.maguared_categorias{
+    font-size: 0.8em;
+}
+
+span.maguared_fecha{
+    padding: 0 0.2em 0 0.2em;
+    margin: 0;
+    position: relative;
+    top: -25px;
+    left: 50%;
+    display:block;
+    background-color: aqua;
+    width: 50%;
+    font-size: 0.8em;
+    text-align: right;
+
+}
+*/
+
+/*CODIGO PARA LAS ENTRADAS DEL HOME*/
+@media only screen and (max-width: 1200px) {
+
+  div#iniciomaguared {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media only screen and (max-width: 860px) {
+
+  div#iniciomaguared, div#iniciomaguared_dos {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/*Código provisional CARRUSEL y DERECHA DE CARRUSEL*/
+.provisionalenlaces_home {
+  min-height: 350px;
+}
+
+.provisionalenlaces_home img {
+  margin: 0, 2em;;
+  padding: 0;
+  min-width: 100%;
+}
+
+.CarruselHome2018 img {
+  max-height: 350px;
+  max-width: 700px;
+}
+
+/*WIDGET AREA*/
+.bienvenida {
+  background-color: rgb(194, 41, 41);
+}
+
+.interno {
+  margin: 0 auto;
+  display: grid;
+  height: auto;
+  grid-template-areas: "maguared maguare buscar redes";
+  grid-template-columns: 2fr 2fr 3fr 3fr;
+  /*grid-template-rows: 120px 50px;*/
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2em;
+  /*height: 90px;*/
+  background-color: rgb(162, 12, 12);
+
+}
+
+.interno {
+  max-width: 1280px;
+
+}
+
+.interno section:nth-child(1) {
+  max-width: 200px;
+  grid-area: 'maguared';
+}
+
+.interno section:nth-child(2) {
+  margin-top: 10px;
+  max-width: 80px;
+  grid-area: 'maguare';
+}
+
+.interno section:nth-child(3) {
+  max-width: 200px;
+  grid-area: 'buscar';
+}
+
+.interno section:nth-child(4) {
+  max-width: 200px;
+  grid-area: 'redes';
+}
+
+/*
+.interno section:nth-child(5){
+    grid-area: 'mainmenu';
+    grid-column: 1 / 5;
+    background-color: #91ffa0;
+
+}
+*/
+
+.nav-primary {
+  text-align: right;
+}
+
+
+
+/*
+header.site-header{
+    margin : 0 !important;
+    padding: 0 !important;
+}
+*/
+
+header.site-header .wrap {
+  //border: 3px lime solid;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/**/
+
+/*MINIENTRADAS EN HOME*/
+
+#minientradas ul li {
+  list-style-type: none;
+}
+
+#minientradas h3 {
+  font-size: 1em;
+}
+
+#minientradas div.rpwe-block, #minientradas ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
