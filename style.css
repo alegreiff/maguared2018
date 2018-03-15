@@ -1954,6 +1954,9 @@ header.site-header .wrap {
   margin: 0 !important;
   padding: 0 !important; }
 
+header .wrap {
+  background-color: lime; }
+
 header .wrap .title-area {
   background-color: #0a6550 !important; }
 
