@@ -2,6 +2,7 @@ div#iniciomaguared_dos {
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr;
+
 }
 
 div#iniciomaguared {
@@ -14,30 +15,24 @@ div#iniciomaguared article, div#iniciomaguared_dos article {
   background-color: #ffffff;
   color: #2e2e2e;
   margin-bottom: 0;
-
   border-radius: 3px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: 1fr;
   padding-top: 0px;
-  align-items: start;
-  justify-items: start;
   grid-gap: 0;
+
+  img{
+
+    /*justify-self: start;*/
+    width: 100%;
+    height: auto !important;
+
+  }
 }
 
-//div#iniciomaguared article a img, div#iniciomaguared_dos article a img{
-div#iniciomaguared article img, div#iniciomaguared_dos article img {
-  margin: 0px !important;
-  padding: 0px !important;
-  justify-self: start;
-  grid-area: 'imagen';
 
-  order: 20;
-  max-width: 320px !important;
-  height: auto !important;
-
-}
 
 div#iniciomaguared article span.maguared_fecha, div#iniciomaguared_dos article span.maguared_fecha {
   //background-color: $naranja-maguared;
@@ -127,6 +122,10 @@ span.maguared_fecha{
 
   div#iniciomaguared {
     grid-template-columns: 1fr 1fr;
+  }
+  div#iniciomaguared_dos {
+    grid-template-columns: 1fr;
+
   }
 
 }

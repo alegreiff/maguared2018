@@ -1777,18 +1777,11 @@ div#iniciomaguared article, div#iniciomaguared_dos article {
   display: grid;
   grid-template-columns: 1fr;
   padding-top: 0px;
-  align-items: start;
-  justify-items: start;
   grid-gap: 0; }
-
-div#iniciomaguared article img, div#iniciomaguared_dos article img {
-  margin: 0px !important;
-  padding: 0px !important;
-  justify-self: start;
-  grid-area: 'imagen';
-  order: 20;
-  max-width: 320px !important;
-  height: auto !important; }
+  div#iniciomaguared article img, div#iniciomaguared_dos article img {
+    /*justify-self: start;*/
+    width: 100%;
+    height: auto !important; }
 
 div#iniciomaguared article span.maguared_fecha, div#iniciomaguared_dos article span.maguared_fecha {
   grid-area: 'fecha';
@@ -1865,7 +1858,9 @@ span.maguared_fecha{
 /*CODIGO PARA LAS ENTRADAS DEL HOME*/
 @media only screen and (max-width: 1200px) {
   div#iniciomaguared {
-    grid-template-columns: 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr; }
+  div#iniciomaguared_dos {
+    grid-template-columns: 1fr; } }
 
 @media only screen and (max-width: 860px) {
   div#iniciomaguared, div#iniciomaguared_dos {
