@@ -2,15 +2,12 @@ div#iniciomaguared_dos {
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr;
-
 }
-
 div#iniciomaguared {
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
 div#iniciomaguared article, div#iniciomaguared_dos article {
   background-color: #ffffff;
   color: #2e2e2e;
@@ -22,22 +19,17 @@ div#iniciomaguared article, div#iniciomaguared_dos article {
   grid-template-columns: 1fr;
   padding-top: 0px;
   grid-gap: 0;
-
   img{
-
     /*justify-self: start;*/
     width: 100%;
     height: auto !important;
-
   }
 }
-
 
 
 div#iniciomaguared article span.maguared_fecha, div#iniciomaguared_dos article span.maguared_fecha {
   //background-color: $naranja-maguared;
   //color: #fff;
-  grid-area: 'fecha';
   order: -1;
   height: 20px;
   font-size: 0.7em;
@@ -51,7 +43,6 @@ div#iniciomaguared article span.maguared_fecha, div#iniciomaguared_dos article s
 
 div#iniciomaguared article header, div#iniciomaguared_dos article header {
   display: block;
-  grid-area: 'titulo';
   //background-color: $aguamarina-maguared;
   height: 75px;
   order: 30;
@@ -67,16 +58,12 @@ div#iniciomaguared h2, div#iniciomaguared_dos h2 {
 div#iniciomaguared article span.maguared_categorias, div#iniciomaguared_dos article span.maguared_categorias {
   justify-self: start;
   align-self: start;
-  grid-area: 'categorias';
   order: 40;
   font-size: 0.8em;
   padding-left: 0.4em;
 }
 
 div#iniciomaguared article div.entry-content, div#iniciomaguared_dos article div.entry-content {
-  justify-self: start;
-  align-self: start;
-  grid-area: 'entrada';
   order: 50;
   justify-self: end;
   align-self: end;
@@ -123,10 +110,15 @@ span.maguared_fecha{
   div#iniciomaguared {
     grid-template-columns: 1fr 1fr;
   }
-  div#iniciomaguared_dos {
-    grid-template-columns: 1fr;
-
+  #segunda-fila-home .panel-grid-cell:nth-of-type(2){
+    display: none;
   }
+  #segunda-fila-home .panel-grid-cell:nth-of-type(1){
+    width: 100%;
+  }
+  /*div#iniciomaguared_dos {
+    grid-template-columns: 1fr;
+  }*/
 
 }
 
@@ -144,7 +136,7 @@ span.maguared_fecha{
 }
 
 .provisionalenlaces_home img {
-  margin: 0, 2em;;
+  margin: 0.2em;
   padding: 0;
   min-width: 100%;
 }
@@ -155,6 +147,7 @@ span.maguared_fecha{
 }
 
 /*WIDGET AREA*/
+/*
 .bienvenida {
   background-color: rgb(194, 41, 41);
 }
@@ -165,11 +158,10 @@ span.maguared_fecha{
   height: auto;
   grid-template-areas: "maguared maguare buscar redes";
   grid-template-columns: 2fr 2fr 3fr 3fr;
-  /*grid-template-rows: 120px 50px;*/
   justify-items: center;
   align-items: center;
   grid-gap: 2em;
-  /*height: 90px;*/
+
   background-color: rgb(162, 12, 12);
 
 }
@@ -181,24 +173,27 @@ span.maguared_fecha{
 
 .interno section:nth-child(1) {
   max-width: 200px;
-  grid-area: 'maguared';
+  grid-area: maguared;
 }
 
 .interno section:nth-child(2) {
   margin-top: 10px;
   max-width: 80px;
-  grid-area: 'maguare';
+  grid-area: maguare;
 }
 
 .interno section:nth-child(3) {
   max-width: 200px;
-  grid-area: 'buscar';
+  grid-area: buscar;
 }
 
 .interno section:nth-child(4) {
   max-width: 200px;
-  grid-area: 'redes';
+  grid-area: redes;
 }
+
+*/
+
 
 /*
 .interno section:nth-child(5){
