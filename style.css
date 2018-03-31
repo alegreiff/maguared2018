@@ -1757,6 +1757,9 @@ p.entry-meta {
   .content-archive .content .entry:last-child {
     margin-left: 0; } }
 
+body {
+  background: limegreen; }
+
 div#iniciomaguared_dos {
   display: grid;
   grid-gap: 40px;
