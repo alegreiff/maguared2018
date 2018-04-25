@@ -13,7 +13,7 @@ jQuery(function($) {
 });
 */
 jQuery(function( $ ){
- 
+
     $(".site-header").after('<div class="bumper"></div>');
     $(window).scroll(function () {
     if ($(document).scrollTop() > 30 ) {
@@ -23,7 +23,7 @@ jQuery(function( $ ){
         $('.site-header').removeClass('fija');
         console.log("Lupe ARRIBA")
     }
-        
+
     });
-     
+
 });
