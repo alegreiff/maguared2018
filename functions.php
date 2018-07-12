@@ -331,45 +331,7 @@ function mash_search_text( $text ) {
 
 
 
-/*BÚSQUEDA*/
-add_action( 'wp_enqueue_scripts', 'b3m_enqueue_dashicons' );
-function b3m_enqueue_dashicons() {
-    wp_enqueue_style( 'dashicons' );
-}
+// https://my.studiopress.com/snippets/nav-extras/
 
-add_filter( 'genesis_search_button_text', 'b3m_search_button_dashicon' );
-function b3m_search_button_dashicon( $text ) {
-    return esc_attr( '&#xf179;' );
-
-}
-
-
-add_filter( 'wp_nav_menu_items', 'theme_menu_extras', 10, 2 );
-/**
- * Filter menu items, appending either a search form or today's date.
- *
- * @param string   $menu HTML string of list items.
- * @param stdClass $args Menu arguments.
- *
- * @return string Amended HTML string of list items.
- */
-function theme_menu_extras( $menu, $args ) {
-    //* Change 'primary' to 'secondary' to add extras to the secondary navigation menu
-    if ( 'secondary' !== $args->theme_location )
-        return $menu;
-    //* Uncomment this block to add a search form to the navigation menu
-
-    ob_start();
-    get_search_form();
-    $search = ob_get_clean();
-    $menu  .= '<li class="right search">' . $search . '</li>';
-
-    //* Uncomment this block to add the date to the navigation menu
-
-    $menu .= '<li class="right date">' . date_i18n( get_option( 'date_format' ) ) . '</li>';
-
-    return $menu;
-}
-
-/*Miércoles 28 de febrero*/
+/*MAYO 16*/
 

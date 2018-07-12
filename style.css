@@ -5,7 +5,7 @@ Theme Name: GENESIS SASS
 Theme URI: #
 Description: Tema base para genesis con SASS
 Version: 1.0
-Author: Jaime de Greiff
+Author: Jaime de Greiff CAXEbaz
 Author URI: #
 License: GPL
 License URI: License.txt
@@ -1968,21 +1968,19 @@ header .wrap .title-area {
 header .wrap .widget-area {
   min-width: 100%;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr minmax(500px, 600px);
-  grid-template-areas: "logomaguared logomaguare busca social menu";
+  grid-template-columns: 150px 90px 2fr minmax(500px, 600px) 200px;
+  grid-template-areas: "logomaguared logomaguare social menu busqueda";
   max-height: 80px !important;
   align-items: center; }
 
 header .wrap .widget-area #sow-image-3 {
   grid-area: logomaguared;
-  max-width: 80%; }
+  max-width: 120px; }
 
 header .wrap .widget-area #sow-image-2 {
   grid-area: logomaguare;
-  max-width: 80%; }
-
-header .wrap .widget-area #search-34 {
-  grid-area: busca; }
+  max-width: 70px;
+  margin-top: 10px; }
 
 header .wrap .widget-area #simple-social-icons-2 {
   grid-area: social; }
@@ -1990,53 +1988,17 @@ header .wrap .widget-area #simple-social-icons-2 {
 header .wrap .widget-area #nav_menu_9 {
   grid-area: menu; }
 
+header .wrap .widget-area #search-34 {
+  grid-area: busqueda; }
+
 @media only screen and (max-width: 1200px) {
   header .wrap .widget-area {
     min-width: 100%;
-    grid-template-columns: 600px 1fr 1fr;
-    grid-template-areas: "menu . logomaguared" "logomaguare busca social"; }
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "menu . logomaguared" "logomaguare . social"; }
   #sow-image-2,
-  #search-34,
   #simple-social-icons-2 {
     display: none; } }
-
-.search-form input[type="submit"] {
-  position: relative;
-  display: inline-block;
-  padding: 13px;
-  margin-top: 3px;
-  margin-left: 10px;
-  width: 90px;
-  height: auto;
-  clip: auto;
-  text-align: center;
-  background-color: #333; }
-
-.search-form {
-  position: relative; }
-
-.search-form > input {
-  padding-left: 40px; }
-
-.search-form input[type="submit"] {
-  background: none !important;
-  border: none;
-  clip: inherit;
-  color: #4a545a;
-  display: inline-block;
-  font-family: 'Dashicons';
-  font-size: 28px;
-  height: 38px;
-  padding: 0 10px 0 12px;
-  position: absolute;
-  right: 0px;
-  top: 12px;
-  vertical-align: top;
-  width: 38px;
-  margin-top: 0em; }
-
-input {
-  margin-left: 50px; }
 
 .fija {
   -webkit-transition: all 2s linear;
@@ -2055,3 +2017,18 @@ input {
 
 .fija p.site-title {
   max-width: 50%; }
+
+/*
+.site-header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    margin: 0 auto;
+    padding: 30px 0px 0px 0px;
+    width: 1100px;
+}
+
+
+nav.nav-primary {
+    margin-top: 110px;
+}*/

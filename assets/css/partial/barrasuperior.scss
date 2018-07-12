@@ -1,20 +1,17 @@
 header {
   //background-color: red !important;
 }
-
 header .wrap {
   //background-color: lime;
 }
-
 header .wrap .title-area {
   background-color: #0a6550 !important;
 }
-
 header .wrap .widget-area {
   min-width: 100%;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr minmax(500px, 600px);
-  grid-template-areas: "logomaguared logomaguare busca social menu";
+  grid-template-columns: 150px 90px 2fr minmax(500px, 600px) 200px;
+  grid-template-areas: "logomaguared logomaguare social menu busqueda";
   max-height: 80px !important;
   align-items: center;
 
@@ -23,14 +20,12 @@ header .wrap .widget-area {
 header .wrap .widget-area{
   #sow-image-3{
     grid-area: logomaguared;
-    max-width: 80%;
+    max-width: 120px;
   }
   #sow-image-2{
     grid-area: logomaguare;
-    max-width: 80%;
-  }
-  #search-34{
-    grid-area: busca;
+    max-width: 70px;
+    margin-top: 10px;
   }
   #simple-social-icons-2{
     grid-area: social;
@@ -38,66 +33,21 @@ header .wrap .widget-area{
   #nav_menu_9{
     grid-area: menu;
   }
+  #search-34{
+    grid-area: busqueda;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   header .wrap .widget-area {
     min-width: 100%;
-    grid-template-columns: 600px 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     grid-template-areas: "menu . logomaguared"
-                         "logomaguare busca social";
+                         "logomaguare . social";
   }
 
   #sow-image-2,
-  #search-34,
   #simple-social-icons-2{
    display: none;
   }
-
-
-}
-
-
-.search-form input[type="submit"] {
-  position: relative;
-  display: inline-block;
-  padding: 13px;
-  margin-top: 3px;
-  margin-left: 10px;
-  width: 90px;
-  height: auto;
-  clip: auto;
-  text-align: center;
-  background-color: #333;
-}
-
-
-.search-form {
-  position: relative;
-}
-
-.search-form > input {
-  padding-left: 40px;
-}
-
-.search-form input[type="submit"] {
-  background: none !important;
-  border: none;
-  clip: inherit;
-  color: #4a545a;
-  display: inline-block;
-  font-family: 'Dashicons';
-  font-size: 28px;
-  height: 38px;
-  padding: 0 10px 0 12px;
-  position: absolute;
-  right: 0px;
-  top: 12px;
-  vertical-align: top;
-  width: 38px;
-  margin-top: 0em;
-}
-input{
-  //border: none;
-  margin-left: 50px;
 }
