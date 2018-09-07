@@ -1,0 +1,6 @@
+@function aclarar($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+@function oscurecer($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

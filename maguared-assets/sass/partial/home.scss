@@ -1,0 +1,114 @@
+/*ESTA ES LA LIBRERÍA DE ESTILOS*/
+
+
+/*Código provisional CARRUSEL y DERECHA DE CARRUSEL*/
+.provisionalenlaces_home {
+  min-height: 350px;
+}
+
+.provisionalenlaces_home img {
+  margin: 0.2em;
+  padding: 0;
+  min-width: 100%;
+}
+
+.CarruselHome2018 img {
+  max-height: 350px;
+  max-width: 700px;
+}
+
+/*WIDGET AREA*/
+/*
+.bienvenida {
+  background-color: rgb(194, 41, 41);
+}
+
+.interno {
+  margin: 0 auto;
+  display: grid;
+  height: auto;
+  grid-template-areas: "maguared maguare buscar redes";
+  grid-template-columns: 2fr 2fr 3fr 3fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2em;
+
+  background-color: rgb(162, 12, 12);
+
+}
+
+.interno {
+  max-width: 1280px;
+
+}
+
+.interno section:nth-child(1) {
+  max-width: 200px;
+  grid-area: maguared;
+}
+
+.interno section:nth-child(2) {
+  margin-top: 10px;
+  max-width: 80px;
+  grid-area: maguare;
+}
+
+.interno section:nth-child(3) {
+  max-width: 200px;
+  grid-area: buscar;
+}
+
+.interno section:nth-child(4) {
+  max-width: 200px;
+  grid-area: redes;
+}
+
+*/
+
+
+/*
+.interno section:nth-child(5){
+    grid-area: 'mainmenu';
+    grid-column: 1 / 5;
+    background-color: #91ffa0;
+
+}
+*/
+
+.nav-primary {
+  text-align: right;
+}
+
+
+
+/*
+header.site-header{
+    margin : 0 !important;
+    padding: 0 !important;
+}
+*/
+
+header.site-header .wrap {
+  //border: 3px lime solid;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/**/
+
+/*MINIENTRADAS EN HOME*/
+
+#minientradas ul li {
+  list-style-type: none;
+}
+
+#minientradas h3 {
+  font-size: 1em;
+}
+
+#minientradas div.rpwe-block, #minientradas ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+

@@ -1,0 +1,67 @@
+@mixin grilla-triple{
+  display: grid;
+  grid-gap: $gap-entre-grids;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@mixin grilla-doble{
+  display: grid;
+  grid-gap: $gap-entre-grids;
+  grid-template-columns: 1fr 1fr;
+}
+
+@mixin texto-Entrada-maguared{
+  order: 50;
+  justify-self: end;
+  align-self: end;
+  height: 180px;
+  padding: 0.2em;
+  background: #faf3ff;
+}
+@mixin articulo-maguared{
+  background-color: $mag-blanco !important;
+  color: $mag-texto;
+  margin-bottom: 0;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 $mag-gris;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 0px;
+  grid-gap: 0;
+  padding: 13px;
+  img{
+    /*justify-self: start;*/
+    width: 100%;
+    height: auto !important;
+  }
+}
+@mixin articulo-maguared-fecha{
+  order: -1;
+  height: 20px;
+  font-size: 0.7em;
+  font-weight: 700;
+  justify-self: end;
+  padding: 0.3em;
+  display: block;
+  width: 100%;
+}
+
+@mixin articulo-maguared-header{
+  display: block;
+  height: 75px;
+  order: 30;
+  width: 100%;
+  padding: 0.2em;
+}
+
+@mixin articulo-maguared-categorias{
+justify-self: start;
+  align-self: start;
+  order: 40;
+  font-size: 0.8em;
+  padding-left: 0.4em;
+}
+
+@mixin articulo-maguared-h2{
+  font-size: 1.1em;
+}

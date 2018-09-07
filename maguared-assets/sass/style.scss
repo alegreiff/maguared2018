@@ -1,0 +1,32 @@
+@import "partial/variables/variables";
+@import "partial/infotema";
+@import "partial/genesis";
+/*! INICIO CUSTOM CSS JAIMEDEGREIFF*/
+@import 'partial/funciones/funciones';
+@import 'partial/posts/mixins';
+@import "partial/fuentes";
+@import "partial/grid_layout";
+@import "partial/home";
+@import 'partial/posts/home';
+@import 'partial/footer';
+@import 'partial/posts/posts';
+@import 'partial/posts/secciones';
+//@import "partial/barrasuperior.scss";
+//@import "partial/sticky_header";
+$colormomento: #ff5e08;
+body{
+  background-color: aclarar($colormomento, 90%);
+}
+
+.genesis-nav-menu {
+  position:fixed;
+  background: aclarar($colormomento, 33%);
+  top:0;
+  right:0;
+  left:0;
+  z-index:999;
+}
+
+.site-header {
+  margin-top: 44px;
+}

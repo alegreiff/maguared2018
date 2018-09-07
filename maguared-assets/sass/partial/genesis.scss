@@ -138,7 +138,7 @@ body {
 	//background-color: #258a9c;
 	background-color: rgb(255, 255, 255);
 	color: #333;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	font-size: 2rem;
 	-webkit-font-smoothing: antialiased;
@@ -156,10 +156,7 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition:    all 0.1s ease-in-out;
-	-ms-transition:     all 0.1s ease-in-out;
-	-o-transition:      all 0.1s ease-in-out;
+	/*! paprika*/
 	transition:         all 0.1s ease-in-out;
 }
 

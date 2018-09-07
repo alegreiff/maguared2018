@@ -1,0 +1,30 @@
+/*! Cómo se ven los posts en el HOME*/
+div.mg--listado--entradas  {
+  @include grilla-doble;
+}
+div.mg--listado--entradas  article {
+  @include articulo-maguared;
+}
+div.mg--listado--entradas  article span.maguared_fecha {
+  @include articulo-maguared-fecha;
+}
+div.mg--listado--entradas  article header {
+  @include articulo-maguared-header;
+}
+div.mg--listado--entradas  h2 {
+  @include articulo-maguared-h2;
+}
+div.mg--listado--entradas  article span.maguared_categorias {
+  @include articulo-maguared-categorias;
+}
+
+div.mg--listado--entradas  article div.entry-content {
+  @include texto-Entrada-maguared;
+}
+/*CODIGO PARA LAS ENTRADAS DEL HOME*/
+
+@media only screen and (max-width: 860px) {
+  div.mg--listado--entradas {
+    grid-template-columns: 1fr;
+  }
+}

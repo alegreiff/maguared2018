@@ -49,7 +49,7 @@ define( 'CHILD_THEME_VERSION', '2.3.0' );
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 function genesis_sample_enqueue_scripts_styles() {
 
-	wp_enqueue_style( 'genesis-sample-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'genesis-sample-fonts', '//fonts.googleapis.com/css?family=Open+Sans', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
@@ -251,21 +251,21 @@ genesis_register_sidebar( array(
 
    add_action( 'genesis_before_header', 'utility_bar' );
    function utility_bar() {
-	
+
 	echo '<div class="utility-bar"><div class="wrap">';
-	
+
 	genesis_widget_area( 'utility-bar-left', array(
 	'before' => '<div class="utility-bar-left">',
 	'after' => '</div>',
 	) );
-	
+
 	genesis_widget_area( 'utility-bar-right', array(
 	'before' => '<div class="utility-bar-right">',
 	'after' => '</div>',
 	) );
-	
+
 	echo '</div></div>';
-	
+
    }
    */
 

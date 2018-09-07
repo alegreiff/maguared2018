@@ -5,6 +5,11 @@ var sass        = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
+var autoprefixer = require('gulp-autoprefixer');
+
+var autoprefixerOptions = {
+    browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+};
 
 // browser-sync task for starting the server.z
 gulp.task('browser-sync', function() {
@@ -26,9 +31,12 @@ gulp.task('browser-sync', function() {
 // Sass task, will run when any SCSS files change & BrowserSync
 // will auto-update browsers
 gulp.task('sass', function () {
-    return gulp.src('./assets/css/*.scss')
+
+    return gulp.src('./maguared-assets/sass/*.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded'}))
+        /*.pipe(sass({outputStyle: 'compressed'}))*/
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest('./'))
     .pipe(reload({stream:true}));
 });
@@ -41,16 +49,15 @@ gulp.task('uglify', function() {
 });
 
 gulp.task('imagemin', function() {
-    gulp.src('img/**/*.{jpg,jpeg,png,gif}')
+    gulp.src('./maguared-assets/img/**/*.{jpg,jpeg,png,gif}')
     .pipe(plumber())
     .pipe(imagemin())
-    .pipe(gulp.dest('img_optimize'));
+    .pipe(gulp.dest('images'));
 });
-
 // Default task to be run with `gulp`
 gulp.task('default', ['uglify', 'imagemin', 'sass', 'browser-sync'], function () {
-    gulp.watch("./assets/css/**/*.scss", ['sass']);
-    gulp.watch("./assets/css/**/**/*.scss", ['sass']);
+    gulp.watch("./maguared-assets/sass/**/*.scss", ['sass']);
+    gulp.watch("./maguared-assets/sass/**/**/*.scss", ['sass']);
     gulp.watch('js/**/*.js', ['uglify']);
-    gulp.watch('img/**/*.{jpg,jpeg,png,gif}', ['imagemin']);
+    gulp.watch('./maguared-assets/img/**/*.{jpg,jpeg,png,gif}', ['imagemin']);
 });
