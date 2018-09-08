@@ -1,26 +1,16 @@
-/* CSS Grid for Responsive Grid Layout | Credit: Sridhar Katakam */
+/*https://sridharkatakam.com/posts-grid-genesis-using-css-grid/*/
 
-.content-archive .content {
+/*.content-archive .content {
     float: none;
-}
-
+}*/
 
 .articles {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-
     display: -ms-grid;
     display: grid;
 
-    -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
     grid-gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .content-archive .content .entry {
@@ -29,26 +19,6 @@
     border-radius: 3px;
     -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-
-    width: 31.25%; /* http://d.pr/i/sVsJRM */
-    margin-bottom: 3.125%;
-}
-
-.content-archive .content .entry:last-child {
-    margin-right: auto;
-    margin-left: 3.125%;
-}
-
-@supports ((display: -ms-grid) or (display: grid)) {
-    .content-archive .content .entry {
-        width: auto;
-        margin-bottom: 0;
-    }
-
-    .content-archive .content .entry:last-child {
-        margin-right: 0;
-        margin-left: 0;
-    }
 }
 
 .content-archive .content .entry-content {
@@ -83,41 +53,11 @@
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
-
-    .content-archive .content .entry {
-        width: 47.5%; /* http://d.pr/i/zHWeyP */
-        margin-bottom: 5%;
-    }
-
-    .content-archive .content .entry:last-child {
-        margin-left: 5%;
-    }
-
-    @supports ((display: -ms-grid) or (display: grid)) {
-        .content-archive .content .entry {
-            width: auto;
-            margin-bottom: 0;
-        }
-
-        .content-archive .content .entry:last-child {
-            margin-left: 0;
-        }
-    }
 }
 
 @media only screen and (max-width: 500px) {
     .articles {
-        flex-direction: column;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
-
-    .content-archive .content .entry {
-        width: 100%; /* http://d.pr/i/zHWeyP */
-    }
-
-    .content-archive .content .entry:last-child {
-        margin-left: 0;
-    }
 }
-

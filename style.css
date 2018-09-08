@@ -1997,25 +1997,16 @@ p.entry-meta {
 }
 
 /*! INICIO CUSTOM CSS JAIMEDEGREIFF*/
-/* CSS Grid for Responsive Grid Layout | Credit: Sridhar Katakam */
-.content-archive .content {
-  float: none;
-}
-
+/*https://sridharkatakam.com/posts-grid-genesis-using-css-grid/*/
+/*.content-archive .content {
+    float: none;
+}*/
 .articles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
   grid-gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .content-archive .content .entry {
@@ -2024,25 +2015,6 @@ p.entry-meta {
   border-radius: 3px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  width: 31.25%;
-  /* http://d.pr/i/sVsJRM */
-  margin-bottom: 3.125%;
-}
-
-.content-archive .content .entry:last-child {
-  margin-right: auto;
-  margin-left: 3.125%;
-}
-
-@supports (display: grid) {
-  .content-archive .content .entry {
-    width: auto;
-    margin-bottom: 0;
-  }
-  .content-archive .content .entry:last-child {
-    margin-right: 0;
-    margin-left: 0;
-  }
 }
 
 .content-archive .content .entry-content {
@@ -2077,40 +2049,12 @@ p.entry-meta {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-  .content-archive .content .entry {
-    width: 47.5%;
-    /* http://d.pr/i/zHWeyP */
-    margin-bottom: 5%;
-  }
-  .content-archive .content .entry:last-child {
-    margin-left: 5%;
-  }
-  @supports (display: grid) {
-    .content-archive .content .entry {
-      width: auto;
-      margin-bottom: 0;
-    }
-    .content-archive .content .entry:last-child {
-      margin-left: 0;
-    }
-  }
 }
 
 @media only screen and (max-width: 500px) {
   .articles {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-  }
-  .content-archive .content .entry {
-    width: 100%;
-    /* http://d.pr/i/zHWeyP */
-  }
-  .content-archive .content .entry:last-child {
-    margin-left: 0;
   }
 }
 
@@ -2448,6 +2392,45 @@ div.mg--listado--entradas article div.entry-content {
 
 .seccion-maguared-h2 div h2 {
   font-size: 3em;
+}
+
+ul.seccion-lista-subcategorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+ul.seccion-lista-subcategorias li {
+  list-style: none;
+  display: inline-block;
+  /*width: calc(100% / 6);*/
+  height: auto;
+  text-align: center;
+  padding: 0.2em;
+}
+
+ul.seccion-lista-subcategorias li a {
+  font-size: 0.8em;
+  border: 1px red solid;
+  padding: 0.2em;
+  text-decoration: none;
+}
+
+ul.seccion-lista-subcategorias li a:hover {
+  font-size: 0.8em;
+  border: 1px red solid;
+  padding: 0.2em;
+  background-color: royalblue;
+}
+
+.kualalumpur .articles article {
+  background-color: #c6c74f;
 }
 
 body {

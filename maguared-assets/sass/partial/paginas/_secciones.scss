@@ -1,0 +1,32 @@
+ul.seccion-lista-subcategorias{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul.seccion-lista-subcategorias li {
+  list-style: none;
+  display: inline-block;
+  /*width: calc(100% / 6);*/
+  height: auto;
+  text-align: center;
+  padding: 0.2em;
+
+}
+
+ul.seccion-lista-subcategorias li a{
+  font-size: 0.8em;
+  border: 1px red solid;
+  padding: 0.2em;
+  text-decoration: none;
+}
+ul.seccion-lista-subcategorias li a:hover{
+  font-size: 0.8em;
+  border: 1px red solid;
+  padding: 0.2em;
+  background-color: royalblue;
+}
+
+.kualalumpur .articles article{
+  background-color: $mag-lima;
+}

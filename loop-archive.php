@@ -8,10 +8,13 @@ add_filter( 'body_class', 'custom_body_class' );
  */
 function custom_body_class( $classes ) {
     $classes[] = 'content-archive';
+    $classes[] = 'kualalumpur';
     return $classes;
 }
 // Force full width content.
-add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+//add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+
+
 // Add opening div.articles tag before the latest post.
 add_action( 'genesis_before_entry', function () {
     global $wp_query;
@@ -35,7 +38,11 @@ add_action( 'genesis_entry_header', 'genesis_entry_header_markup_close' );
 // Add entry title and entry meta in entry content.
 add_action( 'genesis_entry_content', 'genesis_do_post_title' );
 add_action( 'genesis_entry_content', 'genesis_post_meta' );
-add_filter( 'genesis_post_meta', 'custom_post_meta_filter' );
+//add_filter( 'genesis_post_meta', 'custom_post_meta_filter' );
+
+
+
+
 /**
  * Customize entry meta.
  * @param  string $post_meta Existing entry meta
@@ -49,11 +56,12 @@ function custom_post_meta_filter( $post_meta ) {
 remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
 add_action( 'genesis_after_content', 'genesis_posts_nav' );
 // Add closing div tag (for .articles) after the last post.
+
 add_action( 'genesis_after_endwhile', function () {
     if ( is_main_query() ) {
         echo '</div>';
     }
-} ); 
+} );
 
 
 d("lista de categorías");

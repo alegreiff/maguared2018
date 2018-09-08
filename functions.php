@@ -292,10 +292,10 @@ add_action( 'genesis_before_header', 'wpsites_left_header_widget', 11 );
 
 */
 
-function the_category_filter($thelist,$separator='') {
-	if(!defined(‘WP_ADMIN’)) {
+function the_category_filter($thelist, $separator='') {
+	if(!defined('WP_ADMIN')) {
 		//Category IDs to exclude
-		$exclude = array(28);
+		$exclude = array(1754);
 
 		$exclude2 = array();
 		foreach($exclude as $c) {
